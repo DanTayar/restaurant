@@ -50,25 +50,41 @@
 	display: none;
 }
  
-@media screen and (max-width : 500px){
+@media (max-width : 550px){
 	.Navbar ul {
 		height: 65px;
 		overflow: hidden;
 		flex-direction: column;
 		text-align: center;
+		align-self: start;
+		margin: 0;
 
 
 	}
 
 	.Navbar ul:hover {
 		height: initial;
-		align-self: start;
 
 	}
 
 	.Navbar ul li:first-child{
 		display: block;
 	}
+	.Navbar ul img{
+		height: 40px;
+		width: 40px;
+	}
+
+	.Navbar ul a {
+	text-decoration: none;
+	color: red;
+
+	}
+
+	.Navbar ul li:not(:first-child) {
+		padding: 10px;
+	}
+
 
 }
 

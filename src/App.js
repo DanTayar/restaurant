@@ -13,8 +13,9 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Menu from './Menu';
 import Contact from './Contact';
+import Landing from './Landing';
 
-const Landing =() => (<div className='Page'></div>)
+
 
 
 

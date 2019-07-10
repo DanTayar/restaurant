@@ -8,7 +8,7 @@ const Navbar = ()=> (
 	<h1> Meat War </h1>
 	<ul>
 		<li>
-		<a>Menu base </a>
+		<img src='https://image.flaticon.com/icons/svg/815/815966.svg'/>
 		</li>
 		<li>
 			<Link to='/home'>Home</Link>

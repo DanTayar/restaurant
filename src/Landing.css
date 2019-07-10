@@ -1,0 +1,25 @@
+.Landing{
+	background-image: url("https://pbs.twimg.com/media/DxFbsoNU8AAmQnr.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+ 	background-size: cover;
+ 	background-position: center;
+}
+
+.Landing img {
+	max-height: 60vh;
+}
+
+.Landing ul.slider{
+	max-height: 60vh;
+}
+
+.Landing .slide.selected {
+  max-height: 60vh;
+  background-color: transparent;
+}
+
+.Landing .slide.selected div img{
+  max-height: 60vh;
+  width: auto;
+}

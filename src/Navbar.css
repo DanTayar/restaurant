@@ -11,6 +11,8 @@
 
 	border-bottom: 3px solid gold;
 
+	z-index: 50;
+
 }
 
 
@@ -50,7 +52,7 @@
 	display: none;
 }
  
-@media (max-width : 550px){
+@media (max-width : 607px){
 	.Navbar ul {
 		height: 65px;
 		overflow: hidden;

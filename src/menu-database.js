@@ -12,7 +12,11 @@ export default [
           fr: 'tacos au poisson',
           he: 'טקות דג',
         },
-        price: 4,
+        price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
         name: {
@@ -20,7 +24,11 @@ export default [
           fr: 'taco au boeuf',
           he: 'טקות בשר',
         },
-        price: 5,
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
         name: {
@@ -28,10 +36,19 @@ export default [
           fr: 'tacos au porc',
           he: 'טקות חזיר',
         },
-        price: 8,
+
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
-        price: 3.5,
+        price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
         name: {
           en: 'ice cream taco',
           fr: 'taco glace',
@@ -54,7 +71,11 @@ export default [
           fr: 'tacos au poisson supreme',
           he: 'טקות דג',
         },
-        price: 4,
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
         name: {
@@ -62,7 +83,11 @@ export default [
           fr: 'taco au boeuf supreme',
           he: 'טקות בשר',
         },
-        price: 5,
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
         name: {
@@ -70,10 +95,18 @@ export default [
           fr: 'tacos au porc supreme',
           he: 'טקות חזיר',
         },
-        price: 8,
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
-        price: 3.5,
+        price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
         name: {
           en: 'supreme ice cream taco',
           fr: 'taco glace supreme',
@@ -96,15 +129,23 @@ export default [
           fr: 'tacos au poisson bonuit',
           he: 'טקות דג',
         },
-        price: 4,
-      },
-      {
+      price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
+
+      
         name: {
           en: 'bonus beef taco',
           fr: 'taco au boeuf bonuit',
           he: 'טקות בשר',
         },
-        price: 5,
+        price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
         name: {
@@ -112,10 +153,18 @@ export default [
           fr: 'tacos au porc bonuit',
           he: 'טקות חזיר',
         },
-        price: 8,
+        price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
       },
       {
-        price: 3.5,
+price: {
+          USD: 6,
+          EUR: 4,
+          ILS:14,
+        },
         name: {
           en: 'bonus ice cream taco',
           fr: 'taco glace bonuit',

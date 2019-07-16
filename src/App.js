@@ -15,7 +15,7 @@ import Menu from './Menu';
 import Contact from './Contact';
 import Landing from './Landing';
 
-
+import Admin from './admin';
 
 
 
@@ -30,6 +30,7 @@ import Landing from './Landing';
         <Route exact path='/home' component={Home} />
         <Route exact path='/menu' component={Menu} />
         <Route exact path='/contact' component={Contact} />
+        <Route exact path='/admin' component={Admin} />
         <Redirect from = '/' to='/home' />
 
 

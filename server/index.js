@@ -13,7 +13,7 @@ const ORM = require('sequelize');
 const connectionString = process.env.DATABASE_URL || 'postgres://meatwar:guest@localhost:5432/meatwar';
 const connection = new ORM(connectionString, { logging: false });
 
-const { menuItem: menuItem } = require('./model')(connection, ORM);
+const { menuItem: menuItem , Comment } = require('./model')(connection, ORM);
 
 app.use( express.json() );
 
@@ -23,7 +23,7 @@ connection.authenticate()
   .catch((err)=> console.log(err));
 
 
-require('./api')(app, { menuItem});
+require('./api')(app, { menuItem , Comment});
 
 
 app.get('/hydrate', (req, res, next) => {
@@ -34,6 +34,8 @@ app.get('/hydrate', (req, res, next) => {
 	// routehandler
 	menuItem.sync({ force: true})
 		.then(() => menuItem.bulkCreate( require('./mockdata').menuitems))
+		// delete the table that we have and change the model (create  a table)
+		.then(() => Comment.sync({ force: true }))
 		.then(()=> res.json({ message: 'database table menuItem creaation succeeded'}))
 		.catch (err=> res.status(500).json({ message: 'database table creation failed'}))
 

@@ -5,7 +5,7 @@ export default [
       fr: 'Classiques',
       he: 'קלסיקה',
     },
-    menuItems: [
+    menuitems: [
       {
         name: {
           en: 'fish tacos',
@@ -64,7 +64,7 @@ export default [
       fr: 'Supremes',
       he: 'סופרימה',
     },
-    menuItems: [
+    menuitems: [
       {
         name: {
           en: 'supreme fish tacos',
@@ -122,7 +122,7 @@ export default [
       fr: 'Bonuit',
       he: 'בונוס',
     },
-    menuItems: [
+    menuitems: [
       {
         name: {
           en: 'bonus fish tacos',

@@ -16,7 +16,7 @@ const auth = (req, res, next)=>{
 };
 
 
-module.exports = (app, { menuItem , Comment}) => {
+module.exports = (app, { menuItem ,Archivemenuitem, Comment}) => {
 	app.post('/menuitem', auth ,  (req, res, next) => {
 		// routehandler
 		menuItem.create(req.body)
@@ -32,6 +32,29 @@ module.exports = (app, { menuItem , Comment}) => {
 			.then(response=> res.json(response.map(r => r.dataValues)))
 			.catch(err => res.status(500).json({ message: 'failed to read menuitems' }))
 	});
+
+
+	app.delete('/menuitem/:id', auth , (req,res)=> {
+		menuItem.findByPk(1*req.params.id)
+			.then(menuitem => menuitem ? Archivemenuitem.create(menuitem.dataValues)
+										: Promise.reject('menuitem '+req.params.id+' not found'))
+			.then(()=> menuItem.destroy({
+				where: { id: 1*req.params.id},
+			}))
+			.then(()=> res.json({ message: 'deleted menuitem '+req.params.id }))
+			.catch(err => console.log(err) || res.status(404).json({ message: err}));
+
+	});
+
+	app.put('/menuitem/:id', auth ,(req, res) => {
+		menuItem.update(req.body, { where: {id: 1* req.params.id }})
+		 .then(()=>res.json({message:'updated'}))
+    	 .catch(err =>res.status(500).json({err}));
+
+	});
+
+
+
 
 	app.post('/comment', (req, res) => {
 		Comment.create(req.body)

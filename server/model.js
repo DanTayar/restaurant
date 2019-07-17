@@ -1,6 +1,6 @@
 module.exports = (connection, ORM)=>{
-	const menuItem = connection.define('menuitem',{
-	id: {
+  const menuSchema= {
+  id: {
       type: ORM.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -11,20 +11,20 @@ module.exports = (connection, ORM)=>{
       unique: true,
     },
     lang:{
-    	type:ORM.TEXT,
-    	allowNull: false,
+      type:ORM.TEXT,
+      allowNull: false,
     },
     pagetitle:{
-    	type:ORM.TEXT,
-    	allowNull: false,
+      type:ORM.TEXT,
+      allowNull: false,
     },
     currency:{
       type:ORM.TEXT,
       allowNull: false,
     },
     price: {
-    	type:ORM.DECIMAL,
-    	allowNull: false,
+      type:ORM.DECIMAL,
+      allowNull: false,
     },
     pagenumber: {
       type:ORM.INTEGER,
@@ -34,8 +34,10 @@ module.exports = (connection, ORM)=>{
       type:ORM.INTEGER,
       allowNull: false,
     },
-}, { freezeTableName: true });
+  };
 
+  const menuItem = connection.define('menuitem' , menuSchema, { freezeTableName: true});
+  const Archivemenuitem = connection.define('archivemenuitem' , menuSchema, { freezeTableName: true});
 
   const Comment = connection.define('comment', {
     id: {
@@ -60,6 +62,6 @@ module.exports = (connection, ORM)=>{
   })
 
 
-	return { menuItem: menuItem , Comment};
+	return { menuItem: menuItem ,Archivemenuitem, Comment};
 
 };
